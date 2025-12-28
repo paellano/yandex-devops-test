@@ -1,0 +1,21 @@
+Task:
+There are uncommitted changes in branch feature/junior-task.
+You must switch to main to fix a bug, but your current work is not ready to commit.
+
+Solution with git stash:
+
+1. Save uncommitted changes:
+   git stash push -m "work in progress"
+
+2. Switch to main:   git checkout main
+   # or
+   # git switch main
+
+3. After fixing the bug, return to the branch:   git checkout feature/junior-task
+   # or
+   # git switch feature/junior-task
+
+4. Restore unfinished work:
+   git stash pop
+
+This keeps changes safe and lets you continue later.
